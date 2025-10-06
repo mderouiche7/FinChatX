@@ -25,11 +25,6 @@ User Query → Streamlit UI
 ↓
 LangChain AgentExecutor (Groq model)
 ↓
-Async MCP Tools via FastMCP Client
-├── get_stock_price (Finnhub / AlphaVantage / yfinance fallback)
-├── get_ticker_news_tool (Company news via API)
-└── get_market_movers (Top gainers / losers / active stocks)
-↓
 Response → Streamlit display + contextual follow-up suggestions
 
 
