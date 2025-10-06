@@ -33,6 +33,15 @@ Async MCP Tools via FastMCP Client
 Response → Streamlit display + contextual follow-up suggestions
 
 
+**Workflow Summary:**
+1. User enters a question or ticker in Streamlit UI.  
+2. The LangChain agent calls the **Groq LLM (via API)** for reasoning.  
+3. If needed, the agent invokes an **MCP tool** (like `get_price`) through FastMCP.  
+4. Tool results are processed and displayed interactively with suggestions.
+
+---
+
+
 ## 🧩 Core Components
 
 | File | Description |
@@ -45,6 +54,21 @@ Response → Streamlit display + contextual follow-up suggestions
 
 ---
 
+
+
+
+
+##  APIs & External Services
+
+FinChatX integrates multiple APIs and cloud endpoints to enable real-time financial insights and intelligent reasoning:
+
+| **Service** | **Type** | **Usage in Project** | **Notes** |
+|--------------|-----------|----------------------|------------|
+| **Groq Cloud API** |  LLM Inference | Powers the LangChain agent using **Llama 3.1 8B Instant** for reasoning, summarization, and conversational logic. | Selected for its extremely low latency and production-ready performance. |
+| **Finnhub API** |  Financial Data | Provides live stock quotes, market movers, and company metadata through secure API calls. | Used during the MCP tool development for real-time market data retrieval. |
+| **yfinance** |  Data Fetching Library | Retrieves historical OHLCV data and complements Finnhub results when rate limits apply. | Lightweight, open-source fallback ensuring consistent availability. |
+
+---
 
 
 🧩 **Example Streamlit UI:**  
