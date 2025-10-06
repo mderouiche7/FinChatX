@@ -49,7 +49,7 @@ Response → Streamlit display + contextual follow-up suggestions
 
 🧩 **Example Streamlit UI:**  
 ## UI Preview
-![FinChatX Dashboard](C:\DevProjs\FinChatX\data\UI_interface_streamlit.png)
+![FinChatX Dashboard](data/UI_interface_streamlit.png)
 
 💻 **Test File Example:**
 
